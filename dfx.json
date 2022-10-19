@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "syntex_practice_backend": {
+      "main": "src/syntex_practice_backend/main.mo",
+      "type": "motoko"
+    },
+    "syntex_practice_frontend": {
+      "dependencies": [
+        "syntex_practice_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/syntex_practice_frontend/src/index.html"
+      },
+      "source": [
+        "src/syntex_practice_frontend/assets",
+        "dist/syntex_practice_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
